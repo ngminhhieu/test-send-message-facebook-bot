@@ -46,5 +46,5 @@ func main() {
 	router := mux.NewRouter().StrictSlash(true)
 
 	router.HandleFunc("/upload", ServeHTTP).Methods("POST")
-	log.Fatal(http.ListenAndServe(":8083", router))
+	log.Fatal(http.ListenAndServe("0.0.0.0:8080", router))
 }
